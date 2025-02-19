@@ -1,3 +1,10 @@
+@if (request()->getHttpHost() === 'localhost:8081')
+    <h1>Serveur 1</h1>
+@elseif (request()->getHttpHost() === 'localhost:8082')
+    <h1>Serveur 2</h1>
+@endif
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
